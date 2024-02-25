@@ -1,0 +1,116 @@
+#+options: toc:nil
+
+# Example URL: https://tex.stackexchange.com/questions/63877/gantt-chart-package
+
+#+latex_header:\usepackage{pgfgantt}
+#+latex_header:\usepackage{geometry}
+#+latex_header:\geometry{landscape, margin=0.5in}
+
+#+begin_src latex
+  \begin{figure}[tbp]
+    \begin{center}
+
+      \begin{ganttchart}[y unit title=0.4cm,
+          y unit chart=0.5cm,
+          vgrid,hgrid,
+          title label anchor/.style={below=-1.6ex},
+          title left shift=.05,
+          title right shift=-.05,
+          title height=1,
+          progress label text={},
+          bar height=0.7,
+          group right shift=0,
+          group top shift=.6,
+          group height=.3]{1}{29}
+        %labels
+        \gantttitle{February}{29}\\
+        \gantttitle{Week 1}{3}
+        \gantttitle{W2}{7}
+        \gantttitle{W3}{7}
+        \gantttitle{W4}{7}
+        \gantttitle{W5}{5} \\
+
+        %tasks
+        \ganttbar[progress=95]{MILP PAP Paper}{25}{29} \\
+        \ganttbar[progress=95]{SA-PAP Data}{25}{29} \\
+
+      \end{ganttchart}
+    \end{center}
+    \caption{Schedule for February}
+
+  \end{figure}
+  \begin{figure}[tbp]
+    \begin{center}
+
+      \begin{ganttchart}[y unit title=0.4cm,
+          y unit chart=0.5cm,
+          vgrid,hgrid,
+          title label anchor/.style={below=-1.6ex},
+          title left shift=.05,
+          title right shift=-.05,
+          title height=1,
+          progress label text={},
+          bar height=0.7,
+          group right shift=0,
+          group top shift=.6,
+          group height=.3]{1}{31}
+        %labels
+        \gantttitle{March}{31} \\
+        \gantttitle{W1}{2}
+        \gantttitle{W2}{7}
+        \gantttitle{W3}{7}
+        \gantttitle{W4}{7}
+        \gantttitle{W5}{7}
+        \gantttitle{W6}{1} \\
+
+        %tasks
+        \ganttbar[progress=95]{SA-PAP Data}{1}{2} \\
+        \ganttbar[progress=85]{SA PAP Paper}{3}{9} \\
+        \ganttbar[progress=0]{Submit SA PAP Paper}{9}{23} \\
+        \ganttbar[progress=25]{Write Thesis}{9}{31} \\
+        \ganttbar[progress=0]{Submit Thesis}{20}{31} \\
+
+        %relations
+        \ganttlink{elem0}{elem1}
+        \ganttlink{elem1}{elem2}
+        \ganttlink{elem1}{elem3}
+        \ganttlink{elem3}{elem4}
+      \end{ganttchart}
+    \end{center}
+    \caption{Schedule for March}
+
+  \end{figure}
+  \begin{figure}[tbp]
+    \begin{center}
+
+      \begin{ganttchart}[y unit title=0.4cm,
+          y unit chart=0.5cm,
+          vgrid,hgrid,
+          title label anchor/.style={below=-1.6ex},
+          title left shift=.05,
+          title right shift=-.05,
+          title height=1,
+          progress label text={},
+          bar height=0.7,
+          group right shift=0,
+          group top shift=.6,
+          group height=.3]{1}{31}
+        %labels
+        \gantttitle{April}{31} \\
+        \gantttitle{W1}{4}
+        \gantttitle{W2}{7}
+        \gantttitle{W3}{7}
+        \gantttitle{W4}{7}
+        \gantttitle{W5}{6} \\
+        %tasks
+        \ganttbar[progress=0]{Submit Thesis}{1}{4} \\
+        \ganttbar[progress=0]{Defent}{19}{31} \\
+
+        %relations
+        \ganttlink{elem0}{elem1}
+      \end{ganttchart}
+    \end{center}
+    \caption{Schedule for April}
+
+  \end{figure}
+#+end_src
