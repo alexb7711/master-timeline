@@ -1,111 +1,132 @@
+#+TITLE: MASTER DEGREE TIMELINE
 #+options: toc:nil
 
 # Example URL: https://tex.stackexchange.com/questions/63877/gantt-chart-package
 
 #+latex_header:\usepackage{pgfgantt}
-#+latex_header:\usepackage{geometry}
+#+latex_header:\usepackage{lscape}
 #+latex_header:\usepackage{subcaption}
-#+latex_header:\geometry{landscape, margin=0.5in}
+
+To complete my master's degree, I've identified a handful of tasks that must be complete prior to beginning my thesis and defense.
+
+- Completing the MILP-PAP paper (resubmitting, addressing any further comments, etc.)
+- Getting data from the SA-PAP code
+- Updating the SA-PAP paper with the data and create an example section discussing data
+- Write thesis (compilation of previous work)
+- Submit thesis
+- Defend
+
+
+The MILP PAP paper is mostly done, and the revisions done on it has substantially increased the portrayal of the information presented in that paper. This will also assist in developing the SA-PAP paper, as I believe there has been a lot of lessons learned from the MILP paper. For that reason, I'm thinking its about 95% of the way done, future revisions I don't foresee taking considerable time.
+
+The SA-PAP code has been ran and the data has been collected. I just need to compile that information in the paper. I'm labeling the gathering of the data as a action item since its been something that has been on my plate for a while, and I felt like tracking it here seemed fitting. Again, its very near completion, so I'm labeling it as 95% complete.
+
+The SA-PAP paper has by and large has been written, and has a few iterations on the writing. It most likely still requires a few more iterations. The example section also needs to be written. For that reason I'm labeling it at about 80% completion. We had some discussion of submitting this paper, so I just tossed that in with a few weeks of slack.
+
+After the SA-PAP paper has been completed, my thesis will be built off the backbone of the previous work submitted. Depending on the lift that implementing non-linear battery dynamics takes, that may be an addition made into the thesis work. Since a lot of the effort of the writing and code development has been made, I'm labeling the thesis as 25% complete. I'm also giving myself about 3 weeks to compile all that information together. The defense, with this timeline, will then most likely be sometime in mid to late April.
 
 #+begin_src latex
-  \begin{figure}[tbp]
-  \centering
-  \begin{subfigure}[t]{0.9\paperwidth} \centering
+  \begin{landscape}
+    \begin{figure}[tbp]
+      \centering
+      \begin{subfigure}[t]{0.9\paperwidth} \centering
 
-      \begin{ganttchart}[y unit title=0.4cm,
-          y unit chart=0.5cm,
-          vgrid,hgrid,
-          title label anchor/.style={below=-1.6ex},
-          title left shift=.05,
-          title right shift=-.05,
-          title height=1,
-          progress label text={},
-          bar height=0.7,
-          group right shift=0,
-          group top shift=.6,
-          group height=.3]{1}{29}
-        %labels
-        \gantttitle{February}{29}\\
-        \gantttitle{Week 1}{3}
-        \gantttitle{W2}{7}
-        \gantttitle{W3}{7}
-        \gantttitle{W4}{7}
-        \gantttitle{W5}{5} \\
+        \begin{ganttchart}[y unit title=0.4cm,
+            y unit chart=0.5cm,
+            vgrid,hgrid,
+            title label anchor/.style={below=-1.6ex},
+            title left shift=.05,
+            title right shift=-.05,
+            title height=1,
+            progress label text={},
+            bar height=0.7,
+            group right shift=0,
+            group top shift=.6,
+            group height=.3]{1}{29}
+          %labels
+          \gantttitle{February}{29}\\
+          \gantttitle{Week 1}{3}
+          \gantttitle{W2}{7}
+          \gantttitle{W3}{7}
+          \gantttitle{W4}{7}
+          \gantttitle{W5}{5} \\
 
-        %tasks
-        \ganttbar[progress=95]{MILP PAP Paper}{25}{29} \\
-        \ganttbar[progress=95]{SA-PAP Data}{25}{29} \\
+          %tasks
+          \ganttbar[progress=95]{MILP PAP Paper}{25}{29} \\
+          \ganttbar[progress=95]{SA-PAP Data}{25}{29} \\
 
-      \end{ganttchart}
-  \end{subfigure}
+        \end{ganttchart}
+      \end{subfigure}
 
-  \begin{subfigure}[t]{0.9\paperwidth} \centering
+      \begin{subfigure}[t]{0.9\paperwidth} \centering
 
-      \begin{ganttchart}[y unit title=0.4cm,
-          y unit chart=0.5cm,
-          vgrid,hgrid,
-          title label anchor/.style={below=-1.6ex},
-          title left shift=.05,
-          title right shift=-.05,
-          title height=1,
-          progress label text={},
-          bar height=0.7,
-          group right shift=0,
-          group top shift=.6,
-          group height=.3]{1}{31}
-        %labels
-        \gantttitle{March}{31} \\
-        \gantttitle{W1}{2}
-        \gantttitle{W2}{7}
-        \gantttitle{W3}{7}
-        \gantttitle{W4}{7}
-        \gantttitle{W5}{7}
-        \gantttitle{W6}{1} \\
+        \begin{ganttchart}[y unit title=0.4cm,
+            y unit chart=0.5cm,
+            vgrid,hgrid,
+            title label anchor/.style={below=-1.6ex},
+            title left shift=.05,
+            title right shift=-.05,
+            title height=1,
+            progress label text={},
+            bar height=0.7,
+            group right shift=0,
+            group top shift=.6,
+            group height=.3]{1}{31}
+          %labels
+          \gantttitle{March}{31} \\
+          \gantttitle{W1}{2}
+          \gantttitle{W2}{7}
+          \gantttitle{W3}{7}
+          \gantttitle{W4}{7}
+          \gantttitle{W5}{7}
+          \gantttitle{W6}{1} \\
 
-        %tasks
-        \ganttbar[progress=95]{SA-PAP Data}{1}{2} \\
-        \ganttbar[progress=85]{SA PAP Paper}{3}{9} \\
-        \ganttbar[progress=0]{Submit SA PAP Paper}{9}{23} \\
-        \ganttbar[progress=25]{Write Thesis}{9}{31} \\
-        \ganttbar[progress=0]{Submit Thesis}{20}{31} \\
+          %tasks
+          \ganttbar[progress=95]{SA-PAP Data}{1}{2} \\
+          \ganttbar[progress=80]{SA PAP Paper}{3}{9} \\
+          \ganttbar[progress=0]{Submit SA PAP Paper}{9}{23} \\
+          \ganttbar[progress=25]{Write Thesis}{9}{31} \\
+          \ganttbar[progress=0]{Submit Thesis}{20}{31} \\
 
-        %relations
-        \ganttlink{elem0}{elem1}
-        \ganttlink{elem1}{elem2}
-        \ganttlink{elem1}{elem3}
-        \ganttlink{elem3}{elem4}
-      \end{ganttchart}
-  \end{subfigure}
+          %relations
+          \ganttlink{elem0}{elem1}
+          \ganttlink{elem1}{elem2}
+          \ganttlink{elem1}{elem3}
+          \ganttlink{elem3}{elem4}
+        \end{ganttchart}
+      \end{subfigure}
 
-  \begin{subfigure}[t]{0.75\paperwidth} \centering
+      \begin{subfigure}[t]{0.9\paperwidth} \centering
 
-      \begin{ganttchart}[y unit title=0.4cm,
-          y unit chart=0.5cm,
-          vgrid,hgrid,
-          title label anchor/.style={below=-1.6ex},
-          title left shift=.05,
-          title right shift=-.05,
-          title height=1,
-          progress label text={},
-          bar height=0.7,
-          group right shift=0,
-          group top shift=.6,
-          group height=.3]{1}{31}
-        %labels
-        \gantttitle{April}{31} \\
-        \gantttitle{W1}{4}
-        \gantttitle{W2}{7}
-        \gantttitle{W3}{7}
-        \gantttitle{W4}{7}
-        \gantttitle{W5}{6} \\
-        %tasks
-        \ganttbar[progress=0]{Submit Thesis}{1}{4} \\
-        \ganttbar[progress=0]{Defent}{19}{31} \\
+        \begin{ganttchart}[y unit title=0.4cm,
+            y unit chart=0.5cm,
+            vgrid,hgrid,
+            title label anchor/.style={below=-1.6ex},
+            title left shift=.05,
+            title right shift=-.05,
+            title height=1,
+            progress label text={},
+            bar height=0.7,
+            group right shift=0,
+            group top shift=.6,
+            group height=.3]{1}{31}
+          %labels
+          \gantttitle{April}{31} \\
+          \gantttitle{W1}{4}
+          \gantttitle{W2}{7}
+          \gantttitle{W3}{7}
+          \gantttitle{W4}{7}
+          \gantttitle{W5}{6} \\
+          %tasks
+          \ganttbar[progress=0]{Submit Thesis}{1}{4} \\
+          \ganttbar[progress=0]{Defend}{19}{31} \\
 
-        %relations
-        \ganttlink{elem0}{elem1}
-      \end{ganttchart}
-  \end{subfigure}
-  \caption{Schedules for February, March, and April. Note the arrows indicate flow of action items. Also the shaded region in the rectangles indicate percent incomplete. That is, a completely white rectangle is a task that is complete, and a completely grey rectangle is a task that has not been started.}
-  \end{figure}
+          %relations
+          \ganttlink{elem0}{elem1}
+        \end{ganttchart}
+      \end{subfigure}
+      \caption{Schedules for February, March, and April. Note the arrows indicate flow of action items. Also the shaded region in the rectangles indicate percent incomplete. That is, a completely white rectangle is a task that is complete, and a completely grey rectangle is a task that has not been started.}
+
+    \end{figure}
+  \end{landscape}
 #+end_src
